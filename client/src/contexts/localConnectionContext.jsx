@@ -12,7 +12,7 @@ export default function LCProvider({children}){
   const [isHost, setIsHost]  = useState(false);
 
   useEffect( ()=> {
-    socket.current = io();
+    socket.current = io("http://[2401:4900:7156:943:c0f5:a54a:3726:7ee9]:3000");
 
     socket.current.on('welcome', (data)=>{
       console.log(data)

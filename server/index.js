@@ -17,7 +17,7 @@ export const io = new Server(server, {
 });
 
 io.on('connection', socket);
-//app.use(express.static('./public'))
+app.use(express.static('./public'))
 
 server.listen(3000, ()=>{
   console.log("Running on 3000");

@@ -169,7 +169,7 @@ function Meet() {
       }
 
       socket.current.on('meet-id', ( roomId ) =>{
-        setLink(`http://localhost:5173/roomNo/${roomId}`)
+        setLink(`${roomId}`)
       })
       socket.current.on('answer', (answer, p) => {
         pid.current = p;
@@ -301,7 +301,7 @@ function Meet() {
         />
 
         {/*link && <ShowLink onclick={()=>{}} link={link}/>*/}
-        {link && <ShowLink onclick={()=>history.pushState(null, "", link)} link={link}/>}
+        {link && <ShowLink onclick={()=>{}} link={link}/>}
       </div>
       <Line l={0} deg={130} /> <Line l={30} deg={130}/> <Line l={60} deg={130}/> <Line l={90} deg={130}/> <Line l={120} deg={130}/> <Line l={150} deg={130}/> <Line l={180} deg={130}/> <Line l={210} deg={130}/> <Line l={240} deg={130}/> <Line l={270} deg={130}/> <Line l={300} deg={130}/> <Line l={330} deg={130}/> 
     </div>
